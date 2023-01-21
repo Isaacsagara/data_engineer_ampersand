@@ -4,11 +4,11 @@ services:
   database:
     image: postgres
     volumes:
-      - ./example_schema.sql:/docker-entrypoint-initdb.d/example_schema.sql
+      - ./db_schema.sql:/docker-entrypoint-initdb.d/db_schema.sql
     environment:
-      - POSTGRES_DB=codetest
-      - POSTGRES_USER=codetest
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=localhost
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     healthcheck:
       test: pg_isready -U codetest
       interval: 5s

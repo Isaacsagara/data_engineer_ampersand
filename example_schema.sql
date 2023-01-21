@@ -1,6 +1,5 @@
 drop table if exists examples;
 
-
 create table examples
 (
     id   serial
